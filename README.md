@@ -1,4 +1,6 @@
 # foaas-rb
+[![Build Status](https://travis-ci.org/KusabiSensei/foaas-rb.svg?branch=master)](https://travis-ci.org/KusabiSensei/foaas-rb)
+
 As inspired by [tomdionysus/foaas](https://github.com/tomdionysus/foaas), except with beautiful gems.
 
 # Things Needed
