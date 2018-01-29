@@ -13,6 +13,9 @@
 # it.
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
+require "rspec"
+require "rack/test"
+
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
@@ -96,5 +99,7 @@ begin
   # test failures related to randomization by passing the same `--seed` value
   # as the one that triggered the failure.
   Kernel.srand config.seed
+  config.expose_dsl_globally = true
+  config.include Rack::Test::Methods
 end
 end
