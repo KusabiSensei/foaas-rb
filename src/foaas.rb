@@ -1,15 +1,15 @@
-require "sinatra"
+require "sinatra/base"
 require "json"
 
-get "/" do
-  "Hello World!"
-end
+class FOaaS < Sinatra::Application
+  get "/" do
+    "Hello World!"
+  end
 
-get "/version", provides: "html" do
-  slim :version, locals: { verstring: "0.0.1" }
-end
-
-get "/version", provides: :json do
-  h = { application: "foaas-rb", version: "0.0.1"}
-  h.to_json
+  current_dir = Dir.pwd
+  puts current_dir
+  Dir["#{current_dir}/src/operations/*.rb"].each do |file|
+    puts file
+    require file
+  end
 end
