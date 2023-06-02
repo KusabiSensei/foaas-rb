@@ -5,6 +5,6 @@ gem "rake"
 gem "rspec", "~> 3.0"
 gem "rubocop", require: false
 gem "rubocop-github"
-gem "sinatra", "~> 2.2.0"
+gem "sinatra", "~> 2.2.3"
 gem "slim"
 gem "thin"
